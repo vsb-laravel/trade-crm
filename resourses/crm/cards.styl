@@ -1,0 +1,53 @@
+.pushable
+    height:auto;
+.crm
+    &.menu
+    &.card
+        height: 100%;
+        display:none
+        transition: all .2s ease-in;
+        .content
+            height: 100%;
+        .grid
+            height: 100%;
+        &.active
+            display: block;
+        .clearing
+            margin-bottom:.5em;
+            input,h5
+                margin-left: 1em;
+    .left-column,.right-column
+        max-height:100%;
+        overflow:auto;
+    // &#cards_container
+    //     position: fixed;
+    //     transition: all .2s ease-in;
+    //     right:-9999px;
+.ui.menu > .online.item
+    border-color: #21ba45!important;
+    color: #21ba45!important;
+#cards_container
+    >.segment
+        height:calc(100% - 4em);
+
+    // padding-top: 1.4em;
+#cards_container_content
+    height: 100%;
+
+#cards_container_menu
+    margin-left: 2em;
+    margin-top: -.8em;
+    overflow-y: auto;
+#cards_container_menu::-webkit-scrollbar
+    height:4px;
+    width: 4px;
+#cards_container_menu::-webkit-scrollbar-track
+    -webkit-box-shadow: none;
+#cards_container_menu::-webkit-scrollbar-thumb
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+#cards_container_closer
+    position: absolute;
+    top:.3em;
+    left:0;
+    z-index: 100;

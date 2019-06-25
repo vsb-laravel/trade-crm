@@ -1,0 +1,84 @@
+$(document).ready(function() {
+
+		let userSearch = $('#searchUser');
+		let userSearchEdit = $('#searchUserEdit');
+
+	    $('.search-input').typeahead({
+            source: function (query, process) {
+            	return $.get('json/user?calendar=true&search=' + query, function (data) {
+
+                console.log(data);
+            	d = [];
+
+            	$.each(data, function(i,val) {
+                    dd =  {'name':val.name + ' ' + val.surname + ' ' + val.email, 'id': val.id};
+                    d.push(dd);
+                 });
+
+                	return process(d);
+            	});
+            },
+           	hint:true,
+           	items:6,
+            autoSelect: false,
+            minLength:3
+        });
+
+         $('.search-input').on('change', function() {
+            let currentAdd = userSearch.typeahead("getActive");
+            let currentEdit = userSearchEdit.typeahead("getActive");
+
+            if(currentAdd) 
+            {
+                $(".search-input").attr('id-user',currentAdd.id );
+            }
+            else if(currentEdit)
+            {
+               $(".search-input").attr('id-user',currentEdit.id);
+            }
+        });
+
+
+	// $('#assignUserTask').on('click', function(){
+	// 	let letsearch = $('#searchUser').val();
+	// 	$.ajax({
+ //                type: 'get',
+ //                url: '/json/user',
+ //                data: {
+ //                    search: letsearch,
+ //                    // type: 'start_status',
+ //                    // _token: $('meta[name="csrf-token"]').attr('content')
+ //                },
+ //                // error: function () {
+ //                //     swal({
+ //                //         type: 'error',
+ //                //         title: 'Oops...',
+ //                //         text: 'An error has occurred. Please reload the page and try again!',
+ //                //     });
+ //                // },
+ //                success: function (data) {
+ //                    // if (data.success == true)
+ //                    // {
+ //                    //     changeEvent(taskId, '#d64518');
+ //                    // }
+ //                }
+ //            });
+
+
+			// $('.user-search').search({
+   //                  apiSettings: {
+   //                      url: '/json/user?search={query}',
+   //                      onResponse: function(result) {
+   //                          let response = {results: []};
+   //                          result.data.map((u,i)=>{
+   //                              response.results.push({
+   //                                  id: u.id,
+   //                                  title: u.name + ' ' + u.surname,
+   //                                  description: `#<strong><code>${u.id}</code></strong> ${u.rights.title}`
+   //                              });
+   //                          })
+   //                          return response;
+   //                      }
+   //                  },
+	// });
+});
