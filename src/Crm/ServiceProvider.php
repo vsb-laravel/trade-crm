@@ -1,4 +1,4 @@
-<?php namespace Vsb\Crm\ServiceProvider;
+<?php namespace Vsb\Crm;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 class ServiceProvider extends LaravelServiceProvider{
