@@ -16,7 +16,6 @@
     ],
     "require": {
         "php": ">=7.1",
-        "redis": "*",
         "vsb-laravel/trade-payments":"^1.0",
         "vsb-laravel/trade-mechanics":"^1.0"
     },
