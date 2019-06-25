@@ -15,7 +15,9 @@
         }
     ],
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.1",
+        "vsb-laravel/trade-payments":"^1.0",
+        "vsb-laravel/trade-mechanics":"^1.0"
     },
     "require-dev": {
         "laravel/framework": "5.5.x"
