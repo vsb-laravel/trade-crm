@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Vsb\Crm\Http\Controllers;
 
 use App\Newsfeed;
 use App\User;

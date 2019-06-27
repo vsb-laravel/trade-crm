@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Partner_App;
+namespace Vsb\Crm\Http\Controllers\Partner_App;
 
 use DB;
 use Log;

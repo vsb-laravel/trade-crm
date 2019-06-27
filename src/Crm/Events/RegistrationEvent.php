@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Vsb\Crm\Events;
 
 use Request;
 use Illuminate\Broadcasting\Channel;

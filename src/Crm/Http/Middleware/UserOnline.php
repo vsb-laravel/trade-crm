@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Vsb\Crm\Http\Middleware;
 
 use Log;
 use Closure;

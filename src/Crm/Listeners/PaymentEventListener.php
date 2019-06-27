@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners;
+namespace Vsb\Crm\Listeners;
 use Log;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;

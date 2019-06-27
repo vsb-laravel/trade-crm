@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers;
+namespace Vsb\Crm\Http\Controllers;
 
 use Illuminate\Support\Facades\Mail;
 

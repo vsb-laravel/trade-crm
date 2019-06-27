@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers\Api;
+namespace Vsb\Crm\Http\Controllers\Api;
 
 use Log;
 

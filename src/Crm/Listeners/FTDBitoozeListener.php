@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners;
+namespace Vsb\Crm\Listeners;
 
 use Log;
 use App\Account;

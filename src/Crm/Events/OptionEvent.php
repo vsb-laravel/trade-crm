@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Vsb\Crm\Events;
 
 use App\Option;
 use Illuminate\Broadcasting\Channel;

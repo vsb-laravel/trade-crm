@@ -1,5 +1,5 @@
 <?php
-namespace App\Events;
+namespace Vsb\Crm\Events;
 
 use App\User;
 use Illuminate\Support\Facades\Auth;

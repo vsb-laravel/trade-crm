@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Observers;
+namespace Vsb\Crm\Observers;
 use App\User;
 use App\Message;
 use App\Events\UserStateEvent;

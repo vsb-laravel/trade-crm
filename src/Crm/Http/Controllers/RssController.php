@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers;
+<?php namespace Vsb\Crm\Http\Controllers;
 use Log;
 use cryptofx\RSS;
 use Illuminate\Http\Request;

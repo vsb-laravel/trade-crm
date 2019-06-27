@@ -8,17 +8,17 @@ class ServiceProvider extends LaravelServiceProvider{
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'countries');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'countries');
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path('views/vendor/countries'),
+            __DIR__.'/../resources/views' => resource_path('views/vendor/crm'),
         ]);
         $this->publishes([
-            __DIR__.'/../config/countries.php' => config_path('countries.php'),
+            __DIR__.'/../config/crm.php' => config_path('crm.php'),
         ]);
         $this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/countries'),
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/crm'),
         ]);
     }
     public function register() {
-        $this->mergeConfigFrom(__DIR__.'/../config/countries.php', 'countries');
+        $this->mergeConfigFrom(__DIR__.'/../../config/crm.php', 'crm');
         // Register Locations as service
         // $this->app->bind('vsb\Locations\LocationManager', function ($app) {
         //     return new LocationManager($app);
@@ -31,5 +31,14 @@ class ServiceProvider extends LaravelServiceProvider{
             return new Facades\Country();
         });
 
+    }
+    protected function registerRoutes(){
+        Route::group([
+            'prefix' => 'crm',
+            'namespace' => 'Vsb\Crm\Http\Controllers',
+            'middleware' => 'Vsb\Crm\Http\Middleware',
+        ], function () {
+            $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
+        });
     }
 }

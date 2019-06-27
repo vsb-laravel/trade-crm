@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Vsb\Crm\Events;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Broadcasting\Channel;
