@@ -4,12 +4,12 @@ namespace Vsb\Crm\Http\Controllers;
 
 use DB;
 use Log;
-use App\Histo;
-use App\Price;
-use App\User;
-use App\UserTuneHisto;
-use App\UserTunePrice;
-use App\Instrument;
+use Vsb\Crm\Model\Histo;
+use Vsb\Crm\Model\Price;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\UserTuneHisto;
+use Vsb\Crm\Model\UserTunePrice;
+use Vsb\Crm\Model\Instrument;
 use cryptofx\DataTune;
 use Illuminate\Http\Request;
 

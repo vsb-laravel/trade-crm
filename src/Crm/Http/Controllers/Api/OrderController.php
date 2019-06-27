@@ -3,9 +3,9 @@
 namespace Vsb\Crm\Http\Controllers\Api;
 
 
-use App\Order;
-use App\Transaction;
-use App\User;
+use Vsb\Crm\Model\Order;
+use Vsb\Crm\Model\Transaction;
+use Vsb\Crm\Model\User;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;

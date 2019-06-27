@@ -4,7 +4,7 @@ namespace Vsb\Crm\Http\Controllers\Partner_App;
 
 use DB;
 use Log;
-use App\User;
+use Vsb\Crm\Model\User;
 use DataTables;
 use Carbon\Carbon;
 use Illuminate\Http\Request;

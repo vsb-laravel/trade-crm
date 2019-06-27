@@ -2,8 +2,8 @@
 
 namespace Vsb\Crm\Observers;
 
-use App\Price;
-use App\Instrument;
+use Vsb\Crm\Model\Price;
+use Vsb\Crm\Model\Instrument;
 use App\Events\PriceEvent;
 use App\Jobs\PriceHandler;
 

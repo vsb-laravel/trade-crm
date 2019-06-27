@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Observers;
 
-use App\Event;
+use Vsb\Crm\Model\Event;
 use App\Events\EventEvent;
 
 class EventObserver

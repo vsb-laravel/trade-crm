@@ -2,9 +2,9 @@
 
 namespace Vsb\Crm\Observers;
 
-use App\Account;
-use App\User;
-use App\UserHistory;
+use Vsb\Crm\Model\Account;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\UserHistory;
 
 class UserHistoryObserver
 {

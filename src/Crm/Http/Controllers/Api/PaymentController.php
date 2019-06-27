@@ -5,8 +5,8 @@ use Log;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\User;
-use App\Account;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\Account;
 
 class PaymentController extends Controller
 {

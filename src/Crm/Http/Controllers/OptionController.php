@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Http\Controllers;
 
-use App\Option;
+use Vsb\Crm\Model\Option;
 use Illuminate\Http\Request;
 
 class OptionController extends Controller

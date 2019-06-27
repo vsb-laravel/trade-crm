@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Http\Controllers;
 use Log;
-use App\UserMeta;
+use Vsb\Crm\Model\UserMeta;
 use Illuminate\Http\Request;
 
 class UserMetaController extends Controller

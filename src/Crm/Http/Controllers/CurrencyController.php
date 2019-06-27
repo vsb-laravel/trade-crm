@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Http\Controllers;
 
-use App\Currency;
+use Vsb\Crm\Model\Currency;
 use Illuminate\Http\Request;
 
 class CurrencyController extends Controller

@@ -2,8 +2,8 @@
 
 namespace Vsb\Crm\Http\Controllers;
 
-use App\Newsfeed;
-use App\User;
+use Vsb\Crm\Model\Newsfeed;
+use Vsb\Crm\Model\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 

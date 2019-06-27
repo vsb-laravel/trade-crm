@@ -3,11 +3,11 @@
 namespace Vsb\Crm\Listeners;
 
 use Log;
-use App\Instrument;
-use App\UserTuneHisto;
-use App\User;
-use App\Deal;
-use App\UserMeta;
+use Vsb\Crm\Model\Instrument;
+use Vsb\Crm\Model\UserTuneHisto;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\Deal;
+use Vsb\Crm\Model\UserMeta;
 use cryptofx\DealMechanic;
 use App\Events\PriceTuneEvent;
 use Illuminate\Queue\InteractsWithQueue;

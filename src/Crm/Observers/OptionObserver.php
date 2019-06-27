@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Observers;
 
-use App\Option;
+use Vsb\Crm\Model\Option;
 use App\Events\OptionEvent;
 class OptionObserver
 {

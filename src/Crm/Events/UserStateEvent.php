@@ -12,7 +12,7 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Support\Facades\Redis;
-use App\User;
+use Vsb\Crm\Model\User;
 
 
 class UserStateEvent implements ShouldBroadcast

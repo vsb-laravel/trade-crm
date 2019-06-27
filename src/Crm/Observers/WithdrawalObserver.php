@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Observers;
 
-use App\Withdrawal;
+use Vsb\Crm\Model\Withdrawal;
 
 class WithdrawalObserver
 {

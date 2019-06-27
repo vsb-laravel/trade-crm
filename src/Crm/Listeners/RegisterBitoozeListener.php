@@ -3,8 +3,8 @@
 namespace Vsb\Crm\Listeners;
 
 use Log;
-use App\User;
-use App\UserHistory;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\UserHistory;
 use App\Events\RegistrationEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;

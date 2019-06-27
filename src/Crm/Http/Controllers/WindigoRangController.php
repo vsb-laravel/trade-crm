@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Http\Controllers;
 
-use App\WindigoRang;
+use Vsb\Crm\Model\WindigoRang;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;

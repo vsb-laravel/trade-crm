@@ -9,27 +9,27 @@ use App\Http\Controllers\UserController;
 use DB;
 use Log;
 use Illuminate\Http\Request;
-use App\Account;
-use App\User;
-use App\UserMeta;
-use App\UserRights;
-use App\UserStatus;
-use App\UserDocument;
-use App\Currency;
-use App\Instrument;
-use App\Telephony;
-use App\Deal;
-use App\Event;
-use App\Transaction;
+use Vsb\Crm\Model\Account;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\UserMeta;
+use Vsb\Crm\Model\UserRights;
+use Vsb\Crm\Model\UserStatus;
+use Vsb\Crm\Model\UserDocument;
+use Vsb\Crm\Model\Currency;
+use Vsb\Crm\Model\Instrument;
+use Vsb\Crm\Model\Telephony;
+use Vsb\Crm\Model\Deal;
+use Vsb\Crm\Model\Event;
+use Vsb\Crm\Model\Transaction;
 
-use App\Option;
-use App\Task;
-use App\Message;
+use Vsb\Crm\Model\Option;
+use Vsb\Crm\Model\Task;
+use Vsb\Crm\Model\Message;
 
-use App\Source;
-use App\Lead;
-use App\LeadStatus;
-use App\LeadHistory;
+use Vsb\Crm\Model\Source;
+use Vsb\Crm\Model\Lead;
+use Vsb\Crm\Model\LeadStatus;
+use Vsb\Crm\Model\LeadHistory;
 use Illuminate\Support\Facades\Auth;
 
 class PartnerController extends Controller

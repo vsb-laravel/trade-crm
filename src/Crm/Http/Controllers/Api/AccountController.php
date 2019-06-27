@@ -3,9 +3,9 @@
 namespace Vsb\Crm\Http\Controllers\Api;
 
 use Log;
-use App\User;
-use App\Deal;
-use App\Account;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\Deal;
+use Vsb\Crm\Model\Account;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;

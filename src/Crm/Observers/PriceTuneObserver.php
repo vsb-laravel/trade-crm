@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Observers;
 
-use App\UserTunePrice;
+use Vsb\Crm\Model\UserTunePrice;
 use App\Events\PriceTuneEvent;
 
 class PriceTuneObserver

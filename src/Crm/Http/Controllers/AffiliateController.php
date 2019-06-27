@@ -3,8 +3,8 @@
 namespace Vsb\Crm\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\UserMeta;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\UserMeta;
 use Illuminate\Support\Facades\Auth;
 
 class AffiliateController extends Controller

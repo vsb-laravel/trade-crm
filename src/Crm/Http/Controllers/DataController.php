@@ -4,9 +4,9 @@ namespace Vsb\Crm\Http\Controllers;
 
 use Log;
 use Illuminate\Http\Request;
-use App\Instrument;
-use App\Currency;
-use App\Histo;
+use Vsb\Crm\Model\Instrument;
+use Vsb\Crm\Model\Currency;
+use Vsb\Crm\Model\Histo;
 
 class DataController extends Controller
 {

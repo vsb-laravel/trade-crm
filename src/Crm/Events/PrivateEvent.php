@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Events;
 
-use App\Account;
+use Vsb\Crm\Model\Account;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;

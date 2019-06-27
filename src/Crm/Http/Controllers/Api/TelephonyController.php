@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Http\Controllers\Api;
 
-use App\Telephony;
+use Vsb\Crm\Model\Telephony;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

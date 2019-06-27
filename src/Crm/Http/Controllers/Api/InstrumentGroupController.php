@@ -3,8 +3,8 @@
 namespace Vsb\Crm\Http\Controllers\Api;
 
 use Log;
-use App\InstrumentGroup;
-use App\InstrumentGroupPair;
+use Vsb\Crm\Model\InstrumentGroup;
+use Vsb\Crm\Model\InstrumentGroupPair;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;

@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Observers;
 
-use App\UserTuneHisto;
+use Vsb\Crm\Model\UserTuneHisto;
 use App\Events\OhlcTuneEvent;
 class HistoTuneObserver
 {

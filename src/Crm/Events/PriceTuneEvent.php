@@ -2,9 +2,9 @@
 
 namespace Vsb\Crm\Events;
 
-use App\UserMeta;
-use App\Source;
-use App\Price;
+use Vsb\Crm\Model\UserMeta;
+use Vsb\Crm\Model\Source;
+use Vsb\Crm\Model\Price;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;

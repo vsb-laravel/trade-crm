@@ -1,8 +1,8 @@
 <?php
 
 namespace Vsb\Crm\Observers;
-use App\User;
-use App\Message;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\Message;
 use App\Events\UserStateEvent;
 
 class MessageObserver

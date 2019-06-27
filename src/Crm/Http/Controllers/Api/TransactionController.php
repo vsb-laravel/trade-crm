@@ -3,13 +3,13 @@
 namespace Vsb\Crm\Http\Controllers\Api;
 
 use Log;
-use App\Transaction;
-use App\Merchant;
-use App\User;
-use App\UserHistory;
-use App\Account;
-use App\Currency;
-use App\Option;
+use Vsb\Crm\Model\Transaction;
+use Vsb\Crm\Model\Merchant;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\UserHistory;
+use Vsb\Crm\Model\Account;
+use Vsb\Crm\Model\Currency;
+use Vsb\Crm\Model\Option;
 use cryptofx\payments\Exception as PayException;
 use cryptofx\payments\Gateway;
 

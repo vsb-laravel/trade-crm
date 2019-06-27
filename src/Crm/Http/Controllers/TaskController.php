@@ -1,10 +1,10 @@
 <?php namespace Vsb\Crm\Http\Controllers;
 use DB;
 use Log;
-use App\User;
-use App\Task;
-use App\TaskStatus;
-use App\TaskType;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\Task;
+use Vsb\Crm\Model\TaskStatus;
+use Vsb\Crm\Model\TaskType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

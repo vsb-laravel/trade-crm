@@ -3,8 +3,8 @@
 namespace Vsb\Crm\Http\Controllers;
 
 use Log;
-use App\User;
-use App\Account;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

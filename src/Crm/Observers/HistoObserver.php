@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Observers;
 
-use App\Histo;
+use Vsb\Crm\Model\Histo;
 use App\Events\OhlcEvent;
 
 class HistoObserver

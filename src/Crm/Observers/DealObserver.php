@@ -3,10 +3,10 @@
 namespace Vsb\Crm\Observers;
 
 use Auth;
-use App\Deal;
-use App\DealHistory;
-use App\User;
-use App\UserMeta;
+use Vsb\Crm\Model\Deal;
+use Vsb\Crm\Model\DealHistory;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\UserMeta;
 use App\Events\UserStateEvent;
 
 class DealObserver

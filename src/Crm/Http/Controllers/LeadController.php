@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 
 use Log;
 use Excel;
-use App\Lead;
+use Vsb\Crm\Model\Lead;
 
-use App\LeadStatus;
-use App\LeadHistory;
-use App\User;
-use App\UserMeta;
-use App\Comment;
+use Vsb\Crm\Model\LeadStatus;
+use Vsb\Crm\Model\LeadHistory;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\UserMeta;
+use Vsb\Crm\Model\Comment;
 use App\Exports\LeadExport;
 
 use Illuminate\Support\Facades\Auth;

@@ -4,10 +4,10 @@ namespace Vsb\Crm\Http\Middleware;
 
 use Log;
 use Closure;
-use App\User;
-use App\Option;
-use App\UserMeta;
-use App\UserHistory;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\Option;
+use Vsb\Crm\Model\UserMeta;
+use Vsb\Crm\Model\UserHistory;
 use Request;
 use Illuminate\Support\Facades\Auth;
 

@@ -9,9 +9,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request as HttpRequest;
-use App\Option;
-use App\UserMeta;
-use App\UserHistory;
+use Vsb\Crm\Model\Option;
+use Vsb\Crm\Model\UserMeta;
+use Vsb\Crm\Model\UserHistory;
 
 class LoginController extends Controller
 {

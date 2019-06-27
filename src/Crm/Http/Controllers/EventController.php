@@ -1,8 +1,8 @@
 <?php namespace Vsb\Crm\Http\Controllers;
 use DB;
 use Log;
-use App\User;
-use App\Event;
+use Vsb\Crm\Model\User;
+use Vsb\Crm\Model\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

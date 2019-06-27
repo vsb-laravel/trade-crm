@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Observers;
 
-use App\Account;
+use Vsb\Crm\Model\Account;
 use App\Events\UserStateEvent;
 
 class AccountObserver
