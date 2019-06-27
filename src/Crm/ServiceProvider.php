@@ -34,9 +34,9 @@ class ServiceProvider extends LaravelServiceProvider{
     }
     protected function registerRoutes(){
         Route::group([
-            'prefix' => 'crm',
+            // 'prefix' => 'crm',
             'namespace' => 'Vsb\Crm\Http\Controllers',
-            'middleware' => 'Vsb\Crm\Http\Middleware',
+            'middleware' => ['Vsb\Crm\Http\Middleware\UserOnline','Vsb\Crm\Http\Middleware\Google2FA'],
         ], function () {
             $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
         });

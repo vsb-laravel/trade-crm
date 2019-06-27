@@ -15,7 +15,6 @@
 Route::domain('crm.'.env('SM_DOMAIN'))->group(function(){Route::get('/','CrmController@index')->name('crm');});
 Route::domain('partner.'.env('SM_DOMAIN'))->group(function(){Route::get('/','CrmController@index')->name('partner');});
 Route::domain('affilate.'.env('SM_DOMAIN'))->group(function(){Route::get('/','CrmController@index')->name('affilate');});
-Route::domain('trade.'.env('SM_DOMAIN'))->group(function(){Route::get('/','CabinetController@index')->name('trader');});
 Route::domain('pay.'.env('SM_DOMAIN'))->group(function(){
     Route::get('/{merchant}/success','TransactionController@paySuccess');
     Route::get('/{merchant}/fail','TransactionController@payFail');
@@ -23,11 +22,6 @@ Route::domain('pay.'.env('SM_DOMAIN'))->group(function(){
     Route::any('/{merchant}/form','TransactionController@payForm');
     Route::any('/{merchant}/status/{order_id?}','TransactionController@payStatus');
 });
-Route::get('/open/user/{id}','CrmController@openuser');
-
-Route::get('/', 'HomeController@index')->name('home');
-// Route::get('/{page}', 'HomeController@page2')->where('page','^(?!(data|json|html|login|register|signout|trade|account|deal|instrument|email|user|finance|mail|lead|option|task|imap|currency|pairgroup|transaction|newsfeed|rating|pay)).+$')->name('pages2');
-// Route::get('/1/{page}', 'HomeController@index')->where('page','[a-z0-9\-]+')->name('b2c.pages');
 
 Route::prefix('data')->group(function(){
     Route::get('/user', 'AngularController@user')->name('angular.user');
@@ -38,24 +32,6 @@ Route::prefix('data')->group(function(){
     Route::apiResource('brand', 'Api\BrandController');
     Route::apiResource('trx', 'Api\TransactionController');
 });
-
-//
-Route::get('/page/{page}', 'HomeController@page')->name('pages');
-Route::get('/page_home/{page}', 'HomeController@page2')->name('pages2');
-Route::get('/data/test/{type}', 'DataController@test')->name('test');
-// Route::get('/data/amcharts/{type}', 'DataController@amcharts')->name('amcharts');
-Route::get('/data/amcharts/{type}', 'HistoController@index')->name('amcharts');
-
-Auth::routes();
-Broadcast::routes();
-
-Route::get('/register/resendverify', 'Auth\RegisterController@resendVerificationCode')->name('email.resendverification');
-Route::get('/register/verify/{confirmationCode}', 'Auth\RegisterController@confirm')->name('email.verification');
-Route::get('/register/needverify', 'Auth\RegisterController@needverify')->name('register.needverify');
-Route::get('/signout', 'Auth\LoginController@signout')->name('signout');
-
-
-
 // Candles
 Route::get('/data/{type}/{arge?}', 'HistoController@histo')->name('histo')->where('type','histominute|histohour|histoday')->where('agre','[0-9]+');
 //Currencies
@@ -231,33 +207,12 @@ Route::get('/export/customers','FinanceController@customers');
 Route::get('/user/{user}/state','CabinetController@state')->name('global.state');
 Route::get('/test','HomeController@test')->name('test.page');
 
-// Роутинк на страницы обучения
-
-Route::view('/stochastic', 'page.Stochastic');
-Route::view('/sma', 'page.SMA');
-Route::view('/rsi', 'page.RSI');
-Route::view('/parabolic_sar', 'page.Parabolic-SAR');
-Route::view('/macd', 'page.MACD');
-Route::view('/macd_professional', 'page.MACD-professional');
-Route::view('/bollinger_bands', 'page.Bollinger-Bands');
-Route::view('/japanese_standard', 'page.japan_standard');
-Route::view('/medium_slip', 'page.Скользим-по-средним');
-Route::view('/law_of_relative_strength', 'page.low_relative_strange');
-// Route::get('/tradeview/example',function(){
-//     return view('app.tradeview');
-// });
-// Route::get('/tradeview/test',function(){
-//     return view('app.trade');
-// });
-
 ##Task route
 Route::post('/task_add','NewTaskController@addTask')->middleware('auth');
 Route::post('/get_tasks','NewTaskController@index')->middleware('auth');
 Route::post('/show_task','NewTaskController@showTask')->middleware('auth');
-
 Route::delete('/delete_task','NewTaskController@deleteTask')->middleware('auth');
 Route::put('/edit_task','NewTaskController@editTask')->middleware('auth');
-
 Route::post('/get_users_available', 'NewTaskController@getUsersAvailable')->middleware('auth');
 ##
 
