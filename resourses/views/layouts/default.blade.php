@@ -132,7 +132,7 @@
         window.managers = new Collection({!! json_encode($managers) !!},{name:"title",value:"id",desc:"rights.name"})
         window.managers.add("me",window.user.id,window.user.rights.name)
         window.countries = new Collection({!!json_encode($countries)!!},{name:"title",value:"id"});
-        window.merchants = new Collection({!! json_encode(App\Merchant::select("id","title","name")->get()) !!},{name:"title",value:"id",desc:"name"});
+        window.merchants = new Collection({!! json_encode(Vsb\Crm\Merchant::select("id","title","name")->get()) !!},{name:"title",value:"id",desc:"name"});
 
         window.Laravel = {!! json_encode(['csrfToken' => csrf_token(),]) !!};
         window.animationTime = 256;

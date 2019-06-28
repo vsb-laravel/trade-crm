@@ -3,12 +3,12 @@
 namespace Vsb\Crm\Listeners;
 
 use Log;
-use Vsb\Crm\Model\Account;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\UserHistory;
-use Vsb\Crm\Model\UserMeta;
-use Vsb\Crm\Model\Invoice;
-use Vsb\Crm\Model\Merchant;
+use Vsb\Model\Account;
+use App\User;
+use App\UserHistory;
+use App\UserMeta;
+use Vsb\Model\Invoice;
+use Vsb\Model\Merchant;
 
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;

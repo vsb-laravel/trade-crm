@@ -1,10 +1,10 @@
 <?php
 
-namespace Vsb\Crm\Http\Controllers\Api;
+namespace App\Http\Controllers\Api;
 
 use Log;
-use Vsb\Crm\Model\InstrumentGroup;
-use Vsb\Crm\Model\InstrumentGroupPair;
+use App\InstrumentGroup;
+use App\InstrumentGroupPair;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;

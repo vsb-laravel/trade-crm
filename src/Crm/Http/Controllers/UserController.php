@@ -4,38 +4,38 @@ namespace Vsb\Crm\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use Vsb\Crm\Model\Account;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\Mail;
-use Vsb\Crm\Model\Comment;
-use Vsb\Crm\Model\Telephony;
-use Vsb\Crm\Model\UserMeta;
-use Vsb\Crm\Model\UserRights;
-use Vsb\Crm\Model\UserStatus;
-use Vsb\Crm\Model\UserDocument;
-use Vsb\Crm\Model\UserHierarchy;
-use Vsb\Crm\Model\UserHistory;
-use Vsb\Crm\Model\Currency;
-use Vsb\Crm\Model\Instrument;
-use Vsb\Crm\Model\InstrumentGroup;
-use Vsb\Crm\Model\Mailbox;
-use Vsb\Crm\Model\Deal;
-use Vsb\Crm\Model\Option;
-use Vsb\Crm\Model\DealHistory;
-use Vsb\Crm\Model\Withdrawal;
-use Vsb\Crm\Model\Invoice;
-use Vsb\Crm\Model\Transaction;
-use Vsb\Crm\Model\Message;
-use Vsb\Crm\Model\CustomerMail;
-use Vsb\Crm\Model\CustomerMailHistory;
-use Vsb\Crm\Model\UserTune;
-use Vsb\Crm\Model\Task;
-use Vsb\Crm\Model\Lead;
-use Vsb\Crm\Model\Event;
-use Vsb\Crm\Model\UserTunePrice;
-use Vsb\Crm\Model\UserTuneHisto;
+use Vsb\Model\Account;
+use App\User;
+use Vsb\Model\Mail;
+use Vsb\Model\Comment;
+use Vsb\Model\Telephony;
+use App\UserMeta;
+use App\UserRights;
+use App\UserStatus;
+use App\UserDocument;
+use App\UserHierarchy;
+use App\UserHistory;
+use Vsb\Model\Currency;
+use Vsb\Model\Instrument;
+use Vsb\Model\InstrumentGroup;
+use Vsb\Model\Mailbox;
+use Vsb\Model\Deal;
+use Vsb\Model\Option;
+use Vsb\Model\DealHistory;
+use Vsb\Model\Withdrawal;
+use Vsb\Model\Invoice;
+use Vsb\Model\Transaction;
+use Vsb\Model\Message;
+use Vsb\Model\CustomerMail;
+use Vsb\Model\CustomerMailHistory;
+use App\UserTune;
+use Vsb\Model\Task;
+use Vsb\Model\Lead;
+use Vsb\Model\Event;
+use App\UserTunePrice;
+use App\UserTuneHisto;
 
-use App\Mail\TemplatedMails;
+use Vsb\Crm\Mail\TemplatedMails;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -45,9 +45,9 @@ use cryptofx\DataArray;
 use cryptofx\Export;
 
 use Excel;
-use App\Exports\CustomerExport;
+use Vsb\Crm\Exports\CustomerExport;
 
-// use App\Http\Controllers\Auth\RegisterController;
+// use Vsb\Crm\Http\Controllers\Auth\RegisterController;
 
 use Log;
 use DB;
@@ -108,7 +108,7 @@ class UserController extends Controller{
         if(is_null($user)) return response()->json(false,404,['Content-Type' => 'application/json; charset=utf-8'],JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
         if($currentUser->rights_id<10 && $user->rights_id>=$currentUser->rights_id) return redirect()->back();
 
-        // if( class_exists('\\App\\WindigoUser') && class_exists('\\App\\WindigoUserSettings')) $user->load('rang');
+        // if( class_exists('\\Vsb\Crm\\WindigoUser') && class_exists('\\Vsb\Crm\\WindigoUserSettings')) $user->load('rang');
         $admincode = UserMeta::byUser($user)->meta('admincode')->first();
         $admincode = (is_null($admincode))?'':$admincode->meta_value;
         $totals = [
@@ -322,7 +322,7 @@ class UserController extends Controller{
         list($user,$data,$res,$code)=[$rq->user(),$rq->all(),false,200];
         try{
             if(!isset($data["affilate_id"]))$data["affilate_id"]=$rq->user()->id;
-            $rg = app('App\Http\Controllers\Auth\RegisterController');
+            $rg = app('Vsb\Crm\Http\Controllers\Auth\RegisterController');
             $requester = $rq->user();
             if($requester->rights_id < $rq->input('rights_id',1)){
                 throw new \Exception('No rights to assign that',500);
@@ -357,7 +357,7 @@ class UserController extends Controller{
     /**
      * Display the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \Vsb\Crm\User  $user
      * @return \Illuminate\Http\Response
      */
     public function show(User $user)
@@ -368,7 +368,7 @@ class UserController extends Controller{
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \Vsb\Crm\User  $user
      * @return \Illuminate\Http\Response
      */
     public function edit(User $user)
@@ -380,7 +380,7 @@ class UserController extends Controller{
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
+     * @param  \Vsb\Crm\User  $user
      * @return \Illuminate\Http\Response
      */
     public function update(Request $rq,$format='json',$id){
@@ -514,7 +514,7 @@ class UserController extends Controller{
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
+     * @param  \Vsb\Crm\User  $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)
@@ -565,7 +565,7 @@ class UserController extends Controller{
     /**
      * List of user rights
      *
-     * @param  \App\User  $user
+     * @param  \Vsb\Crm\User  $user
      * @return \Illuminate\Http\Response
      */
     public function rights(Request $rq){

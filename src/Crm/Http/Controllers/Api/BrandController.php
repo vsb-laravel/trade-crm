@@ -1,13 +1,13 @@
 <?php
 
-namespace Vsb\Crm\Http\Controllers\Api;
+namespace App\Http\Controllers\Api;
 
 use DB;
 use Log;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\Brand;
-use Vsb\Crm\Model\Invoice;
-use Vsb\Crm\Model\BrandInvoice;
+use App\User;
+use App\Brand;
+use App\Invoice;
+use App\BrandInvoice;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;

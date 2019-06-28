@@ -1,13 +1,13 @@
 <?php
 
-namespace Vsb\Crm\Http\Controllers\Api;
+namespace App\Http\Controllers\Api;
 
 use Log;
 use Auth;
 use Mail;
 // use Swift_MailTransport;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\Mailbox;
+use App\User;
+use App\Mailbox;
 use App\Mail\UserMailbox;
 use Webklex\IMAP\Client;
 use Illuminate\Http\Request;

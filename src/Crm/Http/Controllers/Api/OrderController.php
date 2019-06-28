@@ -1,11 +1,11 @@
 <?php
 
-namespace Vsb\Crm\Http\Controllers\Api;
+namespace App\Http\Controllers\Api;
 
 
-use Vsb\Crm\Model\Order;
-use Vsb\Crm\Model\Transaction;
-use Vsb\Crm\Model\User;
+use App\Order;
+use App\Transaction;
+use App\User;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;

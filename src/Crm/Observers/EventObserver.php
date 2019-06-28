@@ -2,15 +2,15 @@
 
 namespace Vsb\Crm\Observers;
 
-use Vsb\Crm\Model\Event;
-use App\Events\EventEvent;
+use Vsb\Model\Event;
+use Vsb\Crm\Events\EventEvent;
 
 class EventObserver
 {
     /**
      * Handle the event "created" event.
      *
-     * @param  \App\Event  $event
+     * @param  \Vsb\Crm\Event  $event
      * @return void
      */
     public function created(Event $event)
@@ -21,7 +21,7 @@ class EventObserver
     /**
      * Handle the event "updated" event.
      *
-     * @param  \App\Event  $event
+     * @param  \Vsb\Crm\Event  $event
      * @return void
      */
     public function updated(Event $event)
@@ -32,7 +32,7 @@ class EventObserver
     /**
      * Handle the event "deleted" event.
      *
-     * @param  \App\Event  $event
+     * @param  \Vsb\Crm\Event  $event
      * @return void
      */
     public function deleted(Event $event)
@@ -43,7 +43,7 @@ class EventObserver
     /**
      * Handle the event "restored" event.
      *
-     * @param  \App\Event  $event
+     * @param  \Vsb\Crm\Event  $event
      * @return void
      */
     public function restored(Event $event)
@@ -54,7 +54,7 @@ class EventObserver
     /**
      * Handle the event "force deleted" event.
      *
-     * @param  \App\Event  $event
+     * @param  \Vsb\Crm\Event  $event
      * @return void
      */
     public function forceDeleted(Event $event)

@@ -85,7 +85,7 @@
                                 <div class="default text"></div>
                                 <i class="dropdown icon"></i>
                                 <div class="menu">
-                                    @foreach(App\Merchant::all() as $merchant)
+                                    @foreach(Vsb\Crm\Merchant::all() as $merchant)
                                         <div class="item" data-value="{{$merchant->id}}">
                                             <span class="text">{{$merchant->title}}</span>
                                             <span class="description">{{$merchant->name}}</span>
@@ -134,7 +134,7 @@
                 <div class="default text">Merchants</div>
                 <i class="ui dropdown icon"></i>
                 <div class="menu">
-                    @foreach(App\Merchant::all() as $merchant)
+                    @foreach(Vsb\Crm\Merchant::all() as $merchant)
                         <div class="item" data-value="{{$merchant->id}}">
                             <span class="text">{{ $merchant->title }}</span>
                             <span class="description">{{ $merchant->name }}</span>

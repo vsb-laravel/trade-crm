@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Events;
 
-use Vsb\Crm\Model\Option;
+use Vsb\Model\Option;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;

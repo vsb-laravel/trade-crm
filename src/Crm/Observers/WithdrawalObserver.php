@@ -2,14 +2,14 @@
 
 namespace Vsb\Crm\Observers;
 
-use Vsb\Crm\Model\Withdrawal;
+use Vsb\Model\Withdrawal;
 
 class WithdrawalObserver
 {
     /**
      * Handle the withdrawal "created" event.
      *
-     * @param  \App\Withdrawal  $withdrawal
+     * @param  \Vsb\Crm\Withdrawal  $withdrawal
      * @return void
      */
     public function created(Withdrawal $withdrawal)
@@ -25,7 +25,7 @@ class WithdrawalObserver
     /**
      * Handle the withdrawal "updated" event.
      *
-     * @param  \App\Withdrawal  $withdrawal
+     * @param  \Vsb\Crm\Withdrawal  $withdrawal
      * @return void
      */
     public function updated(Withdrawal $withdrawal)
@@ -41,7 +41,7 @@ class WithdrawalObserver
     /**
      * Handle the withdrawal "deleted" event.
      *
-     * @param  \App\Withdrawal  $withdrawal
+     * @param  \Vsb\Crm\Withdrawal  $withdrawal
      * @return void
      */
     public function deleted(Withdrawal $withdrawal)
@@ -52,7 +52,7 @@ class WithdrawalObserver
     /**
      * Handle the withdrawal "restored" event.
      *
-     * @param  \App\Withdrawal  $withdrawal
+     * @param  \Vsb\Crm\Withdrawal  $withdrawal
      * @return void
      */
     public function restored(Withdrawal $withdrawal)
@@ -63,7 +63,7 @@ class WithdrawalObserver
     /**
      * Handle the withdrawal "force deleted" event.
      *
-     * @param  \App\Withdrawal  $withdrawal
+     * @param  \Vsb\Crm\Withdrawal  $withdrawal
      * @return void
      */
     public function forceDeleted(Withdrawal $withdrawal)

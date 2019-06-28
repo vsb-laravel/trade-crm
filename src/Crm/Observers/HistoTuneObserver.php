@@ -2,8 +2,8 @@
 
 namespace Vsb\Crm\Observers;
 
-use Vsb\Crm\Model\UserTuneHisto;
-use App\Events\OhlcTuneEvent;
+use App\UserTuneHisto;
+use Vsb\Crm\Events\OhlcTuneEvent;
 class HistoTuneObserver
 {
     public function created(UserTuneHisto $histo)
@@ -14,7 +14,7 @@ class HistoTuneObserver
     /**
      * Handle the histo "updated" event.
      *
-     * @param  \App\Histo  $histo
+     * @param  \Vsb\Crm\Histo  $histo
      * @return void
      */
     public function updated(UserTuneHisto $histo)

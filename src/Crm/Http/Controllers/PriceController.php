@@ -4,12 +4,12 @@ namespace Vsb\Crm\Http\Controllers;
 
 use DB;
 use Log;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\Price;
-use Vsb\Crm\Model\Histo;
-use Vsb\Crm\Model\Instrument;
-use Vsb\Crm\Model\Source;
-use App\Jobs\Pricehandler;
+use App\User;
+use Vsb\Model\Price;
+use Vsb\Model\Histo;
+use Vsb\Model\Instrument;
+use Vsb\Model\Source;
+use Vsb\Crm\Jobs\Pricehandler;
 use cryptofx\DataTune;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -117,7 +117,7 @@ class PriceController extends Controller{
     /**
      * Display the specified resource.
      *
-     * @param  \App\Histo  $histo
+     * @param  \Vsb\Crm\Histo  $histo
      * @return \Illuminate\Http\Response
      */
     public function show(Histo $histo)
@@ -128,7 +128,7 @@ class PriceController extends Controller{
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Histo  $histo
+     * @param  \Vsb\Crm\Histo  $histo
      * @return \Illuminate\Http\Response
      */
     public function edit(Histo $histo)
@@ -140,7 +140,7 @@ class PriceController extends Controller{
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Histo  $histo
+     * @param  \Vsb\Crm\Histo  $histo
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
@@ -189,7 +189,7 @@ class PriceController extends Controller{
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Histo  $histo
+     * @param  \Vsb\Crm\Histo  $histo
      * @return \Illuminate\Http\Response
      */
     public function destroy(Histo $histo)

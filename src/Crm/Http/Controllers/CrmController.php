@@ -1,33 +1,33 @@
 <?php
 
 namespace Vsb\Crm\Http\Controllers;
-use App\Http\Controllers\UserController;
+use Vsb\Crm\Http\Controllers\UserController;
 use DB;
 use Log;
 use Request as RQ;
 use Illuminate\Http\Request;
-use Vsb\Crm\Model\Account;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\UserMeta;
-use Vsb\Crm\Model\UserRights;
-use Vsb\Crm\Model\UserStatus;
-use Vsb\Crm\Model\UserDocument;
-use Vsb\Crm\Model\Currency;
-use Vsb\Crm\Model\Instrument;
-use Vsb\Crm\Model\Telephony;
-use Vsb\Crm\Model\Deal;
-use Vsb\Crm\Model\Event;
-use Vsb\Crm\Model\Transaction;
+use Vsb\Model\Account;
+use App\User;
+use App\UserMeta;
+use App\UserRights;
+use App\UserStatus;
+use App\UserDocument;
+use Vsb\Model\Currency;
+use Vsb\Model\Instrument;
+use Vsb\Model\Telephony;
+use Vsb\Model\Deal;
+use Vsb\Model\Event;
+use Vsb\Model\Transaction;
 
-use Vsb\Crm\Model\Option;
-use Vsb\Crm\Model\Task;
-use Vsb\Crm\Model\Message;
+use Vsb\Model\Option;
+use Vsb\Model\Task;
+use Vsb\Model\Message;
 use Carbon\Carbon;
 
-use Vsb\Crm\Model\Source;
-use Vsb\Crm\Model\Lead;
-use Vsb\Crm\Model\LeadStatus;
-use Vsb\Crm\Model\LeadHistory;
+use Vsb\Model\Source;
+use Vsb\Model\Lead;
+use Vsb\Model\LeadStatus;
+use Vsb\Model\LeadHistory;
 use Illuminate\Support\Facades\Auth;
 
 class CrmController extends Controller
@@ -117,30 +117,17 @@ class CrmController extends Controller
             "git_version"=>$this->getVersion(),
         ]);
     }
-    public function affilates(Request $rq){
-
-    }
-    public function openuser(Request $rq,$id){
-
-    }
-    public function room(Request $rq){
-        $res = '';
-        $host = 'https://web.windigoarena.gg';
-        try{
-            $http = new \GuzzleHttp\Client([
-                'verify' => false,
-                'base_uri' => $host
-            ]);
-            $response = $http->get($host.'/php/crm_brana.php', [
-                'form_params' => [
-                    'print_karta_crm'=>5
-                ],
-            ]);
-            $res = (string) $response->getBody();
-            Log::debug('CrmController@room: '.$res);
+    public function fastlogin(Request $request,$id){
+        $s = Auth::onceUsingId($id);
+        if($s){
+            $options = class_exists('Vsb\Model\Option')?\Vsb\Model\Option::all():null;
+            $currencies = class_exists('Vsb\Model\Currency')?\Vsb\Model\Currency::all():null;
+            $user = User::find($id);
+            $user->load(['country','manager','transactions'=>function($q){$q->with(['merchant','withdrawal','invoice','comments']);},'documents','accounts','deal'=>function($deal){$deal->with(['instrument','account'])->where('status_id','<',100);}])
+                ->setAppends(['messages','margincall','title']);
+            return view('react',["user"=>$user,'options'=>$options,'currencies'=>$currencies]);
         }
-        catch(\Exception $e){}
-        return $res;
+        return back();
     }
     public function getVersion(){
         $ret = "3.2";

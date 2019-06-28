@@ -6,17 +6,17 @@ use Illuminate\Http\Request;
 
 use Log;
 use Excel;
-use Vsb\Crm\Model\Lead;
+use Vsb\Model\Lead;
 
-use Vsb\Crm\Model\LeadStatus;
-use Vsb\Crm\Model\LeadHistory;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\UserMeta;
-use Vsb\Crm\Model\Comment;
-use App\Exports\LeadExport;
+use Vsb\Model\LeadStatus;
+use Vsb\Model\LeadHistory;
+use App\User;
+use App\UserMeta;
+use Vsb\Model\Comment;
+use Vsb\Crm\Exports\LeadExport;
 
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\UserController;
+use Vsb\Crm\Http\Controllers\UserController;
 
 class LeadController extends Controller {
     protected $_formats = [
@@ -237,7 +237,7 @@ class LeadController extends Controller {
             if(isset($udata['status_id']) && $udata['status_id'] == $status->id ){
                 $data=$lead->toArray();
                 $data['password'] = str_random(12);
-                $rg = app('App\Http\Controllers\Auth\RegisterController');
+                $rg = app('Vsb\Crm\Http\Controllers\Auth\RegisterController');
                 $res = $rg->create($data);
                 $res->update([
                     'parent_user_id'=>$lead->manager_id,

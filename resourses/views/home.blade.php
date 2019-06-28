@@ -82,7 +82,7 @@
     <div class="ui segment page__" id="page__pairs">
         <div class="ui left rail">
             <div class="ui vertical secondary pointing menu sticky" data-context="#page__pairs">
-                <a class="item" data-href="page__pairs_groups" onclick="page.show(this,'pairs','groups');">{{ trans('crm.instruments.groups.title') }}<div class="ui teal left pointing label" id="groups_count">{{App\InstrumentGroup::count()}}</div></a>
+                <a class="item" data-href="page__pairs_groups" onclick="page.show(this,'pairs','groups');">{{ trans('crm.instruments.groups.title') }}<div class="ui teal left pointing label" id="groups_count">{{Vsb\Crm\InstrumentGroup::count()}}</div></a>
                 @can('superadmin')
                 <a class="item" data-href="page__pairs_list" onclick="page.show(this,'pairs','list');">{{ trans('crm.dashboard.instruments') }}<div class="ui teal left pointing label" id="pairs_count">{{count($instruments)}}</div></a>
                 <a class="item" data-href="page__pairs_currencies" onclick="page.show(this,'pairs','currencies');">{{ trans('crm.dashboard.currencies') }}<div class="ui label">{{count($currencies)}}</div></a>

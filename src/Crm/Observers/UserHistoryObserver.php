@@ -2,16 +2,16 @@
 
 namespace Vsb\Crm\Observers;
 
-use Vsb\Crm\Model\Account;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\UserHistory;
+use Vsb\Model\Account;
+use App\User;
+use App\UserHistory;
 
 class UserHistoryObserver
 {
     /**
      * Handle the deal "created" event.
      *
-     * @param  \App\Deal  $deal
+     * @param  \Vsb\Crm\Deal  $deal
      * @return void
      */
     public function created(UserHistory $userHistory)

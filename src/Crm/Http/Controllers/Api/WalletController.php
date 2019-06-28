@@ -1,14 +1,14 @@
 <?php
-namespace Vsb\Crm\Http\Controllers\Api;
+namespace App\Http\Controllers\Api;
 
 use Log;
 
 use GuzzleHttp\Client;
-use Vsb\Crm\Model\Instrument;
-use Vsb\Crm\Model\Currency;
-use Vsb\Crm\Model\Wallet;
-use Vsb\Crm\Model\Account;
-use Vsb\Crm\Model\User;
+use App\Instrument;
+use App\Currency;
+use App\Wallet;
+use App\Account;
+use App\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

@@ -188,7 +188,7 @@
                 <div class="default text">{{ trans('crm.country') }}</div>
                 <i class="dropdown icon"></i>
                 <div class="menu">
-                    @foreach(App\Http\Controllers\UserController::$countries as $row)
+                    @foreach(Vsb\Crm\Http\Controllers\UserController::$countries as $row)
                         <div class="item" data-value="{{$row['id']}}">{{$row['title']}}</div>
                     @endforeach
                 </div>

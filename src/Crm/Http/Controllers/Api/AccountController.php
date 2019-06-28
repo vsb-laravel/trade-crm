@@ -1,11 +1,11 @@
 <?php
 
-namespace Vsb\Crm\Http\Controllers\Api;
+namespace App\Http\Controllers\Api;
 
 use Log;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\Deal;
-use Vsb\Crm\Model\Account;
+use App\User;
+use App\Deal;
+use App\Account;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;

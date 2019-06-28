@@ -3,18 +3,18 @@
 namespace Vsb\Crm\Observers;
 
 use Auth;
-use Vsb\Crm\Model\Deal;
-use Vsb\Crm\Model\DealHistory;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\UserMeta;
-use App\Events\UserStateEvent;
+use Vsb\Model\Deal;
+use Vsb\Model\DealHistory;
+use App\User;
+use App\UserMeta;
+use Vsb\Crm\Events\UserStateEvent;
 
 class DealObserver
 {
     /**
      * Handle the deal "created" event.
      *
-     * @param  \App\Deal  $deal
+     * @param  \Vsb\Crm\Deal  $deal
      * @return void
      */
     public function created(Deal $deal)
@@ -41,7 +41,7 @@ class DealObserver
     /**
      * Handle the deal "updated" event.
      *
-     * @param  \App\Deal  $deal
+     * @param  \Vsb\Crm\Deal  $deal
      * @return void
      */
     public function updated(Deal $deal)
@@ -72,7 +72,7 @@ class DealObserver
     /**
      * Handle the deal "deleted" event.
      *
-     * @param  \App\Deal  $deal
+     * @param  \Vsb\Crm\Deal  $deal
      * @return void
      */
     public function deleted(Deal $deal)
@@ -83,7 +83,7 @@ class DealObserver
     /**
      * Handle the deal "restored" event.
      *
-     * @param  \App\Deal  $deal
+     * @param  \Vsb\Crm\Deal  $deal
      * @return void
      */
     public function restored(Deal $deal)
@@ -94,7 +94,7 @@ class DealObserver
     /**
      * Handle the deal "force deleted" event.
      *
-     * @param  \App\Deal  $deal
+     * @param  \Vsb\Crm\Deal  $deal
      * @return void
      */
     public function forceDeleted(Deal $deal)

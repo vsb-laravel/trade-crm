@@ -2,8 +2,8 @@
 
 namespace Vsb\Crm\Http\Controllers;
 
-use Vsb\Crm\Model\Newsfeed;
-use Vsb\Crm\Model\User;
+use Vsb\Model\Newsfeed;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -76,7 +76,7 @@ class NewsfeedController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Newsfeed  $newsfeed
+     * @param  \Vsb\Crm\Newsfeed  $newsfeed
      * @return \Illuminate\Http\Response
      */
     public function show(Newsfeed $newsfeed)
@@ -88,7 +88,7 @@ class NewsfeedController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Newsfeed  $newsfeed
+     * @param  \Vsb\Crm\Newsfeed  $newsfeed
      * @return \Illuminate\Http\Response
      */
     public function edit(Newsfeed $newsfeed)
@@ -100,7 +100,7 @@ class NewsfeedController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Newsfeed  $newsfeed
+     * @param  \Vsb\Crm\Newsfeed  $newsfeed
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Newsfeed $newsfeed)
@@ -113,7 +113,7 @@ class NewsfeedController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Newsfeed  $newsfeed
+     * @param  \Vsb\Crm\Newsfeed  $newsfeed
      * @return \Illuminate\Http\Response
      */
     public function destroy(Request $request,Newsfeed $newsfeed)

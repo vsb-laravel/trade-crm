@@ -2,15 +2,15 @@
 
 namespace Vsb\Crm\Observers;
 
-use Vsb\Crm\Model\UserTunePrice;
-use App\Events\PriceTuneEvent;
+use App\UserTunePrice;
+use Vsb\Crm\Events\PriceTuneEvent;
 
 class PriceTuneObserver
 {
     /**
      * Handle the price "created" event.
      *
-     * @param  \App\Price  $price
+     * @param  \Vsb\Crm\Price  $price
      * @return void
      */
     public function created(UserTunePrice $price)

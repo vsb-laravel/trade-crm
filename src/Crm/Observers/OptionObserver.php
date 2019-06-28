@@ -2,8 +2,8 @@
 
 namespace Vsb\Crm\Observers;
 
-use Vsb\Crm\Model\Option;
-use App\Events\OptionEvent;
+use Vsb\Model\Option;
+use Vsb\Crm\Events\OptionEvent;
 class OptionObserver
 {
     public function updated(Option $option)

@@ -2,15 +2,15 @@
 
 namespace Vsb\Crm\Observers;
 
-use Vsb\Crm\Model\Histo;
-use App\Events\OhlcEvent;
+use Vsb\Model\Histo;
+use Vsb\Crm\Events\OhlcEvent;
 
 class HistoObserver
 {
     /**
      * Handle the histo "created" event.
      *
-     * @param  \App\Histo  $histo
+     * @param  \Vsb\Crm\Histo  $histo
      * @return void
      */
     public function created(Histo $histo)
@@ -21,7 +21,7 @@ class HistoObserver
     /**
      * Handle the histo "updated" event.
      *
-     * @param  \App\Histo  $histo
+     * @param  \Vsb\Crm\Histo  $histo
      * @return void
      */
     public function updated(Histo $histo)
@@ -32,7 +32,7 @@ class HistoObserver
     /**
      * Handle the histo "deleted" event.
      *
-     * @param  \App\Histo  $histo
+     * @param  \Vsb\Crm\Histo  $histo
      * @return void
      */
     public function deleted(Histo $histo)
@@ -43,7 +43,7 @@ class HistoObserver
     /**
      * Handle the histo "restored" event.
      *
-     * @param  \App\Histo  $histo
+     * @param  \Vsb\Crm\Histo  $histo
      * @return void
      */
     public function restored(Histo $histo)
@@ -54,7 +54,7 @@ class HistoObserver
     /**
      * Handle the histo "force deleted" event.
      *
-     * @param  \App\Histo  $histo
+     * @param  \Vsb\Crm\Histo  $histo
      * @return void
      */
     public function forceDeleted(Histo $histo)

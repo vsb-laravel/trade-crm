@@ -3,7 +3,7 @@
 namespace Vsb\Crm\Events;
 
 use Log;
-use Vsb\Crm\Model\UserMeta;
+use App\UserMeta;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;

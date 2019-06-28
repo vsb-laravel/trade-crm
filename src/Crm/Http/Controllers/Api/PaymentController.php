@@ -1,12 +1,12 @@
 <?php
 
-namespace Vsb\Crm\Http\Controllers\Api;
+namespace App\Http\Controllers\Api;
 use Log;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\Account;
+use App\User;
+use App\Account;
 
 class PaymentController extends Controller
 {

@@ -2,17 +2,17 @@
 
 namespace Vsb\Crm\Http\Controllers;
 
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\Task;
-use Vsb\Crm\Model\TaskType;
+use App\User;
+use Vsb\Model\Task;
+use Vsb\Model\TaskType;
 use Carbon\Carbon;
-use Vsb\Crm\Model\TaskStatus;
+use Vsb\Model\TaskStatus;
 use Illuminate\Http\Request;
-use App\Rules\DateTaskValidation;
+use Vsb\Crm\Rules\DateTaskValidation;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Controller;
+use Vsb\Crm\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 

@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Http\Controllers;
 use Log;
-use Vsb\Crm\Model\UserMeta;
+use App\UserMeta;
 use Illuminate\Http\Request;
 
 class UserMetaController extends Controller
@@ -42,7 +42,7 @@ class UserMetaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\UserMeta  $usermetum
+     * @param  \Vsb\Crm\UserMeta  $usermetum
      * @return \Illuminate\Http\Response
      */
     public function show(UserMeta $usermetum)
@@ -53,7 +53,7 @@ class UserMetaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\UserMeta  $usermetum
+     * @param  \Vsb\Crm\UserMeta  $usermetum
      * @return \Illuminate\Http\Response
      */
     public function edit(UserMeta $usermetum)
@@ -65,7 +65,7 @@ class UserMetaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\UserMeta  $usermetum
+     * @param  \Vsb\Crm\UserMeta  $usermetum
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, UserMeta $usermetum){
@@ -77,7 +77,7 @@ class UserMetaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\UserMeta  $usermetum
+     * @param  \Vsb\Crm\UserMeta  $usermetum
      * @return \Illuminate\Http\Response
      */
     public function destroy(UserMeta $usermetum)

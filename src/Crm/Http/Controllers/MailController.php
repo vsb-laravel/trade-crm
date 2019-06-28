@@ -3,27 +3,27 @@
 namespace Vsb\Crm\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Vsb\Crm\Model\Account;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\CustomerMail;
-use Vsb\Crm\Model\CustomerMailHistory;
-use Vsb\Crm\Model\Comment;
-use Vsb\Crm\Model\UserMeta;
-use Vsb\Crm\Model\UserRights;
-use Vsb\Crm\Model\UserStatus;
-use Vsb\Crm\Model\UserDocument;
-use Vsb\Crm\Model\UserHierarchy;
-use Vsb\Crm\Model\UserHistory;
-use Vsb\Crm\Model\Currency;
-use Vsb\Crm\Model\Instrument;
-use Vsb\Crm\Model\Deal;
-use App\Mail\TemplatedMails;
+use Vsb\Model\Account;
+use App\User;
+use Vsb\Model\CustomerMail;
+use Vsb\Model\CustomerMailHistory;
+use Vsb\Model\Comment;
+use App\UserMeta;
+use App\UserRights;
+use App\UserStatus;
+use App\UserDocument;
+use App\UserHierarchy;
+use App\UserHistory;
+use Vsb\Model\Currency;
+use Vsb\Model\Instrument;
+use Vsb\Model\Deal;
+use Vsb\Crm\Mail\TemplatedMails;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 use cryptofx\DataArray;
-// use App\Http\Controllers\Auth\RegisterController;
+// use Vsb\Crm\Http\Controllers\Auth\RegisterController;
 use Log;
 use DB;
 class MailController extends Controller{

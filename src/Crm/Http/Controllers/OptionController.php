@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Http\Controllers;
 
-use Vsb\Crm\Model\Option;
+use Vsb\Model\Option;
 use Illuminate\Http\Request;
 
 class OptionController extends Controller
@@ -42,7 +42,7 @@ class OptionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Option  $option
+     * @param  \Vsb\Crm\Option  $option
      * @return \Illuminate\Http\Response
      */
     public function show(Option $option)
@@ -53,7 +53,7 @@ class OptionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Option  $option
+     * @param  \Vsb\Crm\Option  $option
      * @return \Illuminate\Http\Response
      */
     public function edit(Option $option)
@@ -65,7 +65,7 @@ class OptionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Option  $option
+     * @param  \Vsb\Crm\Option  $option
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Option $option)
@@ -77,7 +77,7 @@ class OptionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Option  $option
+     * @param  \Vsb\Crm\Option  $option
      * @return \Illuminate\Http\Response
      */
     public function destroy(Option $option)

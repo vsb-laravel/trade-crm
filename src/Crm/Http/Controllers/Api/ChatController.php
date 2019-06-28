@@ -1,12 +1,12 @@
 <?php
 
-namespace Vsb\Crm\Http\Controllers\Api;
+namespace App\Http\Controllers\Api;
 
 use DB;
 use Log;
 use Auth;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\Message;
+use App\User;
+use App\Message;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;

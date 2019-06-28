@@ -5,22 +5,22 @@ use Illuminate\Support\Facades\Mail;
 
 use DB;
 use Log;
-use Vsb\Crm\Model\Transaction;
-use Vsb\Crm\Model\Invoice;
-use Vsb\Crm\Model\Withdrawal;
-use Vsb\Crm\Model\Merchant;
-use Vsb\Crm\Model\Instrument;
-use Vsb\Crm\Model\Deal;
-use Vsb\Crm\Model\Event;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\UserMeta;
-use Vsb\Crm\Model\UserHistory;
-use Vsb\Crm\Model\Account;
-use Vsb\Crm\Model\Currency;
-use Vsb\Crm\Model\Comment;
-use Vsb\Crm\Model\Option;
-use Vsb\Crm\Model\Price;
-use App\Events\DepositEvent;
+use Vsb\Model\Transaction;
+use Vsb\Model\Invoice;
+use Vsb\Model\Withdrawal;
+use Vsb\Model\Merchant;
+use Vsb\Model\Instrument;
+use Vsb\Model\Deal;
+use Vsb\Model\Event;
+use App\User;
+use App\UserMeta;
+use App\UserHistory;
+use Vsb\Model\Account;
+use Vsb\Model\Currency;
+use Vsb\Model\Comment;
+use Vsb\Model\Option;
+use Vsb\Model\Price;
+use Vsb\Crm\Events\DepositEvent;
 use cryptofx\DataArray;
 use cryptofx\payments\gateway\PayBoutique;
 use cryptofx\PayException;
@@ -28,7 +28,7 @@ use cryptofx\payments\Exception;
 use cryptofx\payments\Gateway;
 use Illuminate\Http\Request;
 
-use App\Notifications\Withdrawal as WithdrawalNotification;
+use Vsb\Crm\Notifications\Withdrawal as WithdrawalNotification;
 
 class TransactionController extends Controller{
 
@@ -811,8 +811,8 @@ class TransactionController extends Controller{
                         if($i->error!=0){ //payment request
                             $amount = ($res->amount!==false)?$res->amount:$i->amount;
                             $opt = Option::where('name','deposit_need_convertion')->first();
-                            if(!is_null($opt) && $opt->is_set() and class_exists('\\App\\WindigoSettings')){
-                                $ws = \App\WindigoSettings::find(1);
+                            if(!is_null($opt) && $opt->is_set() and class_exists('\\Vsb\Crm\\WindigoSettings')){
+                                $ws = \Vsb\Crm\WindigoSettings::find(1);
                                 if(!is_null($ws) && !is_null($ws->val_int)) $amount = $ws->val_int*$mount;
                             }
                             if($res->currency!="USD"){

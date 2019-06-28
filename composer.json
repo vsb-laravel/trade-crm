@@ -27,7 +27,10 @@
     "autoload": {
         "psr-4": {
             "Vsb\\": "src/"
-        }
+        },
+        "files": [
+            "src/Crm/helpers.php"
+        ]
     },
     "autoload-dev": {
         "files": [

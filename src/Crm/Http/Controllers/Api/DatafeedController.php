@@ -1,13 +1,13 @@
 <?php
 
-namespace Vsb\Crm\Http\Controllers\Api;
+namespace App\Http\Controllers\Api;
 
 use DB;
 use Log;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\Source;
-use Vsb\Crm\Model\Currency;
-use Vsb\Crm\Model\Instrument;
+use App\User;
+use App\Source;
+use App\Currency;
+use App\Instrument;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

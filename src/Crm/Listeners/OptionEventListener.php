@@ -2,7 +2,7 @@
 
 namespace Vsb\Crm\Listeners;
 
-use Vsb\Crm\Model\UserMeta;
+use App\UserMeta;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 

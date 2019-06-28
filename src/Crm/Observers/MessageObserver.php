@@ -1,16 +1,16 @@
 <?php
 
 namespace Vsb\Crm\Observers;
-use Vsb\Crm\Model\User;
-use Vsb\Crm\Model\Message;
-use App\Events\UserStateEvent;
+use App\User;
+use Vsb\Model\Message;
+use Vsb\Crm\Events\UserStateEvent;
 
 class MessageObserver
 {
     /**
      * Handle the Message "created" event.
      *
-     * @param  \App\Message  $Message
+     * @param  \Vsb\Crm\Message  $Message
      * @return void
      */
     public function created(Message $message)
