@@ -16,6 +16,9 @@ class ServiceProvider extends LaravelServiceProvider{
         $this->publishes([
             __DIR__.'/../../resources/lang' => resource_path('lang/vendor/crm'),
         ]);
+        $this->publishes([
+            __DIR__.'/../../public/crm' => public_path('vendor/crm'),
+        ], 'public');
 
         $this->registerRoutes();
         $this->registerCommands();
